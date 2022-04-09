@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800" prefWidth="1200" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.docgia.Controller">
+   <children>
+      <Button layoutX="56.0" layoutY="52.0" mnemonicParsing="false" onAction="#quayLai" prefHeight="50.0" prefWidth="200.0" text="Quay lại" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="table" layoutX="18.0" layoutY="82.0" prefHeight="50.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="70.0">
+        <columns>
+          <TableColumn fx:id="idDocGiaColumn" maxWidth="1000.0" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="tenDocGiaColumn" prefWidth="75.0" text="Tên độc giả" />
+            <TableColumn fx:id="gioiTinhColumn" maxWidth="2000.0" prefWidth="70.0" text="Giới tính" />
+            <TableColumn fx:id="diaChiColumn" prefWidth="93.0" text="Địa chỉ" />
+            <TableColumn fx:id="ngaySinhColumn" maxWidth="4000.0" prefWidth="75.0" text="Ngày sinh" />
+            <TableColumn fx:id="CMNDColumn" maxWidth="3000.0" prefWidth="75.0" text="CMND" />
+            <TableColumn fx:id="emailColumn" maxWidth="4000.0" prefWidth="75.0" text="Email" />
+            <TableColumn fx:id="sdtColumn" maxWidth="4000.0" prefWidth="41.0" text="Điện thoại" />
+            <TableColumn fx:id="buttonsColumn" maxWidth="1500.0" prefWidth="75.0" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label alignment="CENTER" layoutX="351.0" layoutY="27.0" prefHeight="50.0" prefWidth="200.0" text="Danh sách độc giả" AnchorPane.leftAnchor="300.0" AnchorPane.rightAnchor="700.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="1024.0" layoutY="99.0" prefHeight="40.0" prefWidth="280.0" text="Thêm độc giả" AnchorPane.bottomAnchor="630.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tenDocGiaTextField" layoutX="956.0" layoutY="140.0" prefHeight="30.0" prefWidth="280.0" promptText="Tên độc giả" AnchorPane.bottomAnchor="560.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="diaChiTextField" layoutX="990.0" layoutY="219.0" prefHeight="30.0" prefWidth="280.0" promptText="Địa chỉ" AnchorPane.bottomAnchor="400.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="emailTextField" layoutX="974.0" layoutY="378.0" prefHeight="30.0" prefWidth="280.0" promptText="Email" AnchorPane.bottomAnchor="160.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="sdtTextField" layoutX="944.0" layoutY="518.0" prefHeight="30.0" prefWidth="280.0" promptText="Số điện thoại" AnchorPane.bottomAnchor="80.0" AnchorPane.rightAnchor="10.0" />
+      <TextField fx:id="cmndTextField" layoutX="969.0" layoutY="332.0" prefHeight="30.0" prefWidth="280.0" promptText="Số chứng minh nhân dân" AnchorPane.bottomAnchor="240.0" AnchorPane.rightAnchor="7.0" />
+      <ComboBox fx:id="gioiTinhComboBox" layoutX="969.0" layoutY="174.0" prefHeight="30.0" prefWidth="280.0" AnchorPane.bottomAnchor="480.0" AnchorPane.rightAnchor="7.0" />
+      <DatePicker fx:id="ngaySinhDatePicker" editable="false" layoutX="973.0" layoutY="275.0" prefHeight="30.0" prefWidth="280.0" promptText="Ngày sinh" AnchorPane.bottomAnchor="320.0" AnchorPane.rightAnchor="10.0" />
+      <Button fx:id="themDocGiaButton" layoutX="1077.0" layoutY="628.0" mnemonicParsing="false" onAction="#themDocGia" prefHeight="40.0" prefWidth="280.0" text="Thêm" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label layoutX="930.0" layoutY="113.0" prefHeight="30.0" prefWidth="280.0" text="Tên độc giả" AnchorPane.bottomAnchor="600.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="940.0" layoutY="123.0" prefHeight="30.0" prefWidth="280.0" text="Giới tính" AnchorPane.bottomAnchor="520.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="950.0" layoutY="133.0" prefHeight="30.0" prefWidth="280.0" text="Địa chỉ" AnchorPane.bottomAnchor="440.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="960.0" layoutY="143.0" prefHeight="30.0" prefWidth="280.0" text="Ngày sinh" AnchorPane.bottomAnchor="360.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="970.0" layoutY="153.0" prefHeight="30.0" prefWidth="280.0" text="Số chứng minh nhân dân" AnchorPane.bottomAnchor="280.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="980.0" layoutY="163.0" prefHeight="30.0" prefWidth="280.0" text="Email" AnchorPane.bottomAnchor="200.0" AnchorPane.rightAnchor="10.0" />
+      <Label layoutX="993.0" layoutY="645.0" prefHeight="30.0" prefWidth="280.0" text="Số điện thoại" AnchorPane.bottomAnchor="120.0" AnchorPane.rightAnchor="10.0" />
+      <Button layoutX="965.0" layoutY="70.0" mnemonicParsing="false" onAction="#chooseDirectory" prefHeight="30.0" prefWidth="280.0" text="Xuất file" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0" />
+   </children>
+</AnchorPane>
